@@ -6,7 +6,7 @@ export const serverClient = appRouter.createCaller({
     httpBatchLink({
       url:
         process.env.NODE_ENV === "production"
-          ? "todolist-app-rio-rifaldi.vercel.app/api/trpc"
+          ? "https://todolist-app-rio-rifaldi.vercel.app/api/trpc"
           : "http://localhost:3000/api/trpc",
     }),
   ],
