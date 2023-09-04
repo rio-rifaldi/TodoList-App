@@ -10,7 +10,7 @@ export const GetTodos = ({ initialTodo }: Props) => {
     initialData: initialTodo,
     refetchOnMount: false,
     refetchOnReconnect: false,
-    refetchOnWindowFocus: false,
+    cacheTime: 1000,
   });
   const refetchTodos = () => {
     Todos.refetch();
