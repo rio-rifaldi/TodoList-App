@@ -11,7 +11,10 @@ export default function TRPCProvider({ children }: { children: ReactNode }) {
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: "http://localhost:3000/api/trpc",
+          url:
+            process.env.NODE_ENV === "production"
+              ? "todolist-app-rio-rifaldi.vercel.app/api/trpc"
+              : "http://localhost:3000/api/trpc",
         }),
       ],
     })
