@@ -34,6 +34,14 @@ export default function TodoList({ initialTodo }: Props) {
           {addTodos.isLoading && (
             <Skeleton className="w-full max-w-md h-14  rounded-sm dark:bg-slate-900 bg-slate-400 " />
           )}
+          {Todos.isLoading && (
+            <div className="flex gap-2 w-full max-w-md">
+              <Skeleton className="w-full max-w-md h-14  rounded-sm dark:bg-slate-900 bg-slate-400 " />
+              <Skeleton className="w-full max-w-md h-14  rounded-sm dark:bg-slate-900 bg-slate-400 " />
+              <Skeleton className="w-full max-w-md h-14  rounded-sm dark:bg-slate-900 bg-slate-400 " />
+              <Skeleton className="w-full max-w-md h-14  rounded-sm dark:bg-slate-900 bg-slate-400 " />
+            </div>
+          )}
         </div>
       </ScrollArea>
     </>
