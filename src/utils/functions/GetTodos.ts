@@ -8,7 +8,8 @@ type Props = {
 export const GetTodos = ({ initialTodo }: Props) => {
   const Todos = trpc.getTodos.useQuery(undefined, {
     initialData: initialTodo,
-    cacheTime: 100,
+    cacheTime: undefined,
+    staleTime: undefined,
   });
   const refetchTodos = () => {
     Todos.refetch();

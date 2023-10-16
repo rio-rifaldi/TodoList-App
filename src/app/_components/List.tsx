@@ -13,7 +13,7 @@ function List({ id, status, todo, refetchTodos }: ListProps) {
   });
 
   return (
-    <div className="w-full max-w-md flex py-2 px-5 shadow-md justify-between items-center dark:bg-slate-800 rounded-sm bg-[#FCFCFC]">
+    <div className="w-full max-w-md flex py-2 px-3 pl-5 shadow-md justify-between items-center dark:bg-slate-800 rounded-sm bg-[#FCFCFC]">
       <Checkbox
         type="submit"
         checked={status}
@@ -23,7 +23,10 @@ function List({ id, status, todo, refetchTodos }: ListProps) {
           setStatusTodo({ id, status: status ? false : true })
         }
       />
-      <p className="text-sm  text-black peer-aria-checked:line-through peer-aria-checked:text-slate-500 dark:text-white break-all mx-4 ">
+      <p
+        className="text-sm  text-black peer-aria-checked:line-through peer-aria-checked:text-slate-500 dark:text-white break-all mx-4 cursor-pointer"
+        onClick={() => setStatusTodo({ id, status: status ? false : true })}
+      >
         {todo}
       </p>
       <div className="flex gap-3">

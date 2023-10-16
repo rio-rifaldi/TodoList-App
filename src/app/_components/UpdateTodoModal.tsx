@@ -33,7 +33,7 @@ const UpdateTodoModal = ({ id, pastTodo, refetchTodo }: UpdateTodoProps) => {
           <Edit3Icon size={17} className="text-white w-4 md:w-[1.1rem]" />{" "}
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] max-w-sm">
+      <DialogContent className="sm:max-w-[425px] max-w-[330px] rounded-lg ">
         <DialogHeader>
           <DialogTitle>Edit Todo</DialogTitle>
           <DialogDescription>
@@ -53,7 +53,7 @@ const UpdateTodoModal = ({ id, pastTodo, refetchTodo }: UpdateTodoProps) => {
             <Input
               id="newTodo"
               placeholder="type new todo here..."
-              className="col-span-3 focus:ring-0"
+              className="col-span-3 focus:ring-0 text-sm"
               required
               {...UpdateTodoForm.register("todo")}
             />

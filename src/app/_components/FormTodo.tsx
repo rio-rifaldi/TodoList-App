@@ -14,7 +14,7 @@ const FormTodo = ({ addTodoStaterPack }: FormTodoProps) => {
         <Input
           type="text"
           id="todo"
-          className="w-full "
+          className="w-full border-slate-400 dark:border-slate-800"
           {...FormTodos.register("todo")}
           required
         />

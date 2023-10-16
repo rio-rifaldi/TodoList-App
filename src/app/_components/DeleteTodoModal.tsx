@@ -26,7 +26,7 @@ export function DeleteTodoModal({ refetchTodos, id }: ModalTodoProps) {
           <Trash2Icon className="w-4 md:w-[1.1rem] " />{" "}
         </Button>
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent className=" rounded-lg  max-w-[330px]  sm:max-w-[425px]">
         <AlertDialogHeader>
           <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription>
